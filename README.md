@@ -1,2 +1,37 @@
-[![Work in Repl.it](https://classroom.github.com/assets/work-in-replit-14baed9a392b3a25080506f3b7b6d57f295ec2978f6f33ec97e36a161684cbe9.svg)](https://classroom.github.com/online_ide?assignment_repo_id=4886587&assignment_repo_type=AssignmentRepo)
-# hgp-ml-splatter-1
+let canvasDiv;
+
+let canvas;
+
+let buttonDiv;
+
+let clearButton;
+
+let sliderDiv;
+
+let slider;
+
+let minSpan;
+
+let maxSpan;
+// create canvas UI
+
+canvasDiv = createDiv();
+
+canvas = createCanvas(640, 480);
+
+background(65, 60, 88);
+canvas.mousePressed(drawEllipse);
+canvas.parent(canvasDiv);
+// create button UI
+
+buttonDiv = createDiv();
+
+clearButton = createButton("Clear Canvas");
+clearButton.mousePressed(function() {
+
+  background(65, 60, 88);
+
+});
+clearButton.parent(buttonDiv);
+fill("#f00");
+ellipse(mouseX, mouseY, 100);
